@@ -1,0 +1,44 @@
+
+Answer QS1: (String or phrase Palindrome or not)
+=================================================
+#include <iostream> 
+#include <string> 
+#include <algorithm> 
+using namespace std; 
+ 
+ bool IsPalindrome(string str)
+ {
+    transform(str.begin(), str.end(), str.begin(), ::tolower);
+    string newstr = str; 
+    reverse(str.begin(), str.end()); 
+    if(str==newstr)
+    {
+      return true;
+    }
+    else
+    {
+      return false;
+    }
+ }
+
+Answer qs2: 
+===================
+Select ID,NAME from CUSTOMER order by NAME desc, ID asc
+
+
+Answer qs3:
+================= 
+SELECT id,name,marks
+
+  CASE
+  WHEN marks BETWEEN 90  AND 100  THEN A+
+  WHEN marks BETWEEN 70 AND 89 THEN A
+  WHEN marks BETWEEN 50 AND 69 THEN B
+  WHEN marks BETWEEN 40 AND 49 THEN C
+  WHEN marks BETWEEN 0 AND 39 THEN FAIL
+  END AS grade,
+ 
+FROM students
+
+
+
